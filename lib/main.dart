@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  // Column ตัวเลข + ป้ายกำกับ ใช้ซ้ำ 3 ครั้ง
+
   Widget _stat(String number, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ส่วนที่ 2: รูปโปรไฟล์ + ตัวเลข 3 ช่อง
+
               Row(
                 children: [
                   const CircleAvatar(
@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // ส่วนที่ 3: ชื่อและแคปชัน
+
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // ส่วนที่ 4: ปุ่มติดตาม (ทึบ) + ปุ่มข้อความ (มีเส้นขอบ)
+
               Row(
                 children: [
                   Expanded(
@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // ส่วนที่ 5: แถบไอคอน
+
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 8),
 
-              // ส่วนที่ 6: แกลเลอรีภาพ 3 ภาพจากอินเทอร์เน็ต
+
               GridView.count(
                 crossAxisCount: 3,
                 shrinkWrap: true,
@@ -138,11 +138,11 @@ class HomePage extends StatelessWidget {
                 crossAxisSpacing: 2,
                 mainAxisSpacing: 2,
                 children: [
-                  Image.asset('li.jpg',
+                  Image.network('https://i.pinimg.com/736x/2c/6b/7c/2c6b7c58ada62f5de3ada81ee0d5a0a8.jpg',
                       fit: BoxFit.cover),
-                  Image.asset('m.jpg',
+                  Image.network('https://i.pinimg.com/736x/7e/72/0f/7e720f6bd08d9b918b16b20c1cbed554.jpg',
                       fit: BoxFit.cover),
-                    Image.asset('vu.jpg',
+                    Image.network('https://i.pinimg.com/736x/27/d1/91/27d191b75c0b8db8c634a83398173ee7.jpg',
                       fit: BoxFit.cover),
                 ],
               ),
